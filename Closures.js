@@ -1,10 +1,11 @@
 function outerFunction(argumentText) {
   //   Lexical environment surrounding 'innerFunction'
-  let outerText = "I am declared in outer function, ";
   function innerFunction() {
     var innerText = "yet accessible from inner function, ";
     console.log(outerText + innerText + argumentText);
   }
+  // As long as outerText sits in the same lexical environment, its available to innerFunction
+  let outerText = "I am declared in outer function, ";
   return innerFunction;
 }
 
