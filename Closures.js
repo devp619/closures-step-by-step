@@ -22,4 +22,6 @@ function superOuterFunction() {
 
 // OR
 
+let outerText = "I am declared in global scope, ";
+
 superOuterFunction()("even after the outer function has finished executing")(); 
